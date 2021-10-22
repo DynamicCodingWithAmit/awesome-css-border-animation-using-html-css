@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>css card animation</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:rgb(8,10,43);
+            }
+            .box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                box-shadow: -10px -10px 15px rgba(0,0,0,0.2),
+                10px 10px 15px rgba(0,0,0,0.2);
+            }
+            .box:before{
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 400px;
+                background-image: linear-gradient(to top,rgb(184,14,196),rgb(19,161,242));
+                 animation: rotate 4s infinite;   
+                    }
+            .box:after{
+                    content: "03";
+                    width: 190px;
+                    height: 290px;
+                    background-color:rgb(8,10,43);
+                    position: absolute;
+                    color: #fff;
+                    font-size: 100px;
+                    font-weight: 900;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            }
+            @keyframes rotate{
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+    </body>
+</html>
